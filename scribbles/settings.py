@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)wh*i&k%cn1ut54_ulvvn*+g(kyx(56p1s*+e346d=grb+ptdi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-katiejanecoughl-journal-cjt6iql6cb5.ws-eu108.gitpod.io', '.herokuapp.com']
 
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'scribbles.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgres://pdjbljge:M3GpKhy2rwmCtXDO4-4Tkh3rSSsiIiIz@flora.db.elephantsql.com/pdjbljge"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
