@@ -2,6 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'user' as user_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -46,6 +47,11 @@
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}"
                             href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link
+                          {% if request.path == user_url %}active{%endif%}" aria-current="page"
+                            href="{% url 'user' %}">User</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}"
@@ -101,8 +107,8 @@
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">
-      {% block copyright %}Made by Code Instituters{% endblock copyright %}
-</p>
+            {% block copyright %}Made by Code Instituters{% endblock copyright %}
+        </p>
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
