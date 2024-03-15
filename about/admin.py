@@ -5,6 +5,9 @@ from .models import About, CollaborateRequest
 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
+    """
+    Adds rich-text editing of content in admin
+    """
     summernote_fields = ('content',)
 
 # Note: admin.ModelAdmin is the standard way of registering
