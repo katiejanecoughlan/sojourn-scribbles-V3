@@ -1,23 +1,25 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
+
+{% block content %}
 <div class="container mt-5">
   <div class="row">
-    <div class="col-4 text-center">
-      <img src="{% static 'images/nobody.jpg' %}" width="75%" />
+    <div class="col-12 col-md-4 text-center">
+      {% if user.profile_image %}
+        <img src="{{ user.profile_image.url }}" width="75%" alt="{{ user.title }}">
+      {% else %}
+        <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
+      {% endif %}
     </div>
-    <div class="col-8">
-      <!-- Title goes between these h2 tags -->
-      <h2>{{ about.title }}</h2>
-      <!-- Content goes directly underneath this -->
-      {{ about.content | safe }}
+    <div class="col-12 col-md-8">
+      <h2>{{ user.title }}</h2>
+      {{ user.content | safe }}
     </div>
   </div>
   <div class="row">
     <div class="col text-right">
       <!-- Updated on field goes in here -->
-
-      <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+      <p class="text-end"><em>Updated on: {{ user.updated_on }}</em></p>
     </div>
   </div>
 </div>
