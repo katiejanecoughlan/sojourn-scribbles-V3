@@ -16,16 +16,18 @@ class PostList(generic.ListView):
 
 def post_detail(request, slug):
     """
-    Display an individual :model:`blog.Post`.
-
+    Returns all published posts in :model:`blog.Post`
+    and displays them in a page of six posts.
     **Context**
 
-    ``post``
-        An instance of :model:`blog.Post`.
+    ``queryset``
+        All published instances of :model:`blog.Post`
+    ``paginate_by``
+        Number of posts per page.
 
     **Template:**
 
-    :template:`blog/post_detail.html`
+    :template:`blog/index.html`
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
