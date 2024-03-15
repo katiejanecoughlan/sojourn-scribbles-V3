@@ -6,15 +6,14 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 class Profiles(models.Model):
     """
-    Stores a single about me text
+    Represents a user profile containing a bio, title, profile image, and post content.
+
     """
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="profile_bio"
-    )
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=200)
     profile_image = CloudinaryField('image', default='placeholder')
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    
+
     def __str__(self):
         return self.title
