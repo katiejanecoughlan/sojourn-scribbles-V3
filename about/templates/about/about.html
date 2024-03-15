@@ -26,15 +26,13 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 my-5">
-            <h2>Let's collaborate!</h2>
-            <p>I believe in the power of shared knowledge and collective effort.
-                Whether you have a project in mind, wish to co-author
-                an article, or simply want to brainstorm some ideas,
-                I'm excited to hear from you. Fill out the form
-                and we can get the ball rolling!</p>
+            <h2>Share Your Thoughts with Sojourn Scribbles!</h2>
+            <p>At Sojourn Scribbles, where wanderlust and sisterhood collide, we're all about embracing the magic of
+                shared experiences and building a vibrant community of solo travelers. Whether you have feedback on our
+                posts, ideas for future content, or simply want to reach out to the Sojourn Scribbles team, we're all
+                ears! Fill out the form below to share your thoughts, ask questions, or just say hello. We can't wait to
+                hear from you and make Sojourn Scribbles even more amazing together!</p>
 
-            <!-- add your form here. Your submit button should 
-                                have the classes of btn, btn-secondary -->
             <form method="post">
                 {{ collaborate_form | crispy }}
                 {% csrf_token %}
