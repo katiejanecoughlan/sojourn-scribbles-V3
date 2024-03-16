@@ -16,11 +16,21 @@
       {{ profiles.content | safe }}
     </div>
   </div>
+  <div class="row mt-5">
+    <div class="col">
+      <h3>Scribble a New Journal Entry</h3>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Post</button>
+      </form>
+    </div>
+  </div>
   <div class="row">
     <div class="col text-right">
-      <!-- Updated on field goes in here -->
       <p class="text-end"><em>Updated on: {{ profiles.updated_on }}</em></p>
     </div>
   </div>
 </div>
 {% endblock content %}
+
