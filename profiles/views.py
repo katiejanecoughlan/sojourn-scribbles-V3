@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Profiles
-from blog.models import Post  
-from blog.forms import PostForm  
+from blog.forms import PostForm
 
+@login_required
 def profiles_me(request):
     """
     Renders the most recent information on the website author.
@@ -17,7 +18,7 @@ def profiles_me(request):
     **Template**
     :template:`profiles/profiles.html`
     """
-    profiles = Profiles.objects.all().order_by('-updated_on').first()
+    profiles = Profiles.objects.latest('updated_on')
 
     if request.method == 'POST':
         # Handle the form submission to create a new post
@@ -27,9 +28,12 @@ def profiles_me(request):
             post.author = request.user
             post.save()
             messages.success(request, 'Post created successfully.')
-            return redirect('profiles_me')  # Redirect to the home page after post creation
+            return redirect('home')  # Redirect to home page after post creation
         else:
-            messages.error(request, 'Error creating post. Please check the form.')
+            # Display specific error messages for each field
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, f'Error with {field}: {error}')
 
     else:
         form = PostForm()  # Instantiate an empty form
