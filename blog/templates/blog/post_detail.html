@@ -45,15 +45,12 @@
         <div class="col-12">
             <hr>
         </div>
-        <!-- Delete post button -->
-        <div class="col-md-8 card mb-4 mt-3">
-            {% if user.is_authenticated and post.author == user %}
-            <form action="{% url 'post_delete' post.slug %}" method="post">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-danger">Delete Post</button>
-            </form>
-            {% endif %}
-        </div>
+<!-- Delete post button -->
+<div class="col-md-8 card mb-4 mt-3">
+    {% if user.is_authenticated and post.author == user %}
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete Post</button>
+    {% endif %}
+</div>
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4 mt-3 ">
@@ -119,8 +116,40 @@
     </div>
 </div>
 
+<!-- Delete post confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete post?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your post? This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <form id="deletePostForm" action="{% url 'post_delete' post.slug %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}
 
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
+
+<script>
+    // Attach event listener to delete button inside the post delete confirmation modal
+    document.getElementById('deleteModal').addEventListener('click', function(event) {
+        if (event.target.id === 'deleteConfirm') {
+            // Submit the form when delete button is clicked
+            document.getElementById('deletePostForm').submit();
+        }
+    });
+</script>
 {% endblock %}
