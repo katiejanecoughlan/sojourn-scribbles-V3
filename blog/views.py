@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
@@ -99,3 +100,17 @@ def comment_delete(request, slug, comment_id):
                              'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+@login_required
+def post_delete(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    
+    # Check if the current user is the author of the post
+    if request.user == post.author:
+        post.delete()
+        messages.success(request, 'Post deleted successfully!')
+    else:
+        messages.error(request, 'You can only delete your own posts!')
+    
+    return HttpResponseRedirect(reverse('home'))  # Redirect to the post list page after deletion

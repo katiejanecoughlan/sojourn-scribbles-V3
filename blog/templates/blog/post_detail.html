@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 
@@ -14,12 +14,12 @@
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if post.featured_image.url == post.featured_image.url %}
-                    <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
+                <img src="{{ post.featured_image.url }}" class="scale" alt="{{ post.title }}">
                 {% else %}
-                    <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
                 {% endif %}
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -44,6 +44,15 @@
         </div>
         <div class="col-12">
             <hr>
+        </div>
+        <!-- Delete post button -->
+        <div class="col-md-8 card mb-4 mt-3">
+            {% if user.is_authenticated and post.author == user %}
+            <form action="{% url 'post_delete' post.slug %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete Post</button>
+            </form>
+            {% endif %}
         </div>
     </div>
     <div class="row">
