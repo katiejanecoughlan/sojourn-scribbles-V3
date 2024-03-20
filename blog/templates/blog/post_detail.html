@@ -143,13 +143,6 @@
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
 
-<script>
-    // Attach event listener to delete button inside the post delete confirmation modal
-    document.getElementById('deleteModal').addEventListener('click', function(event) {
-        if (event.target.id === 'deleteConfirm') {
-            // Submit the form when delete button is clicked
-            document.getElementById('deletePostForm').submit();
-        }
-    });
-</script>
+<script src="{% static 'js/post_delete.js' %}"></script>
+
 {% endblock %}
