@@ -7,6 +7,24 @@
 <div class="container-fluid">
     <div class="row">
 
+        <!-- Add the filtering form here -->
+        <form action="{% url 'home' %}" method="get">
+            <label for="user">Select User:</label>
+            <select name="user" id="user">
+                <option value="">All Users</option>
+                {% for user in users %}
+                <option value="{{ user.id }}">{{ user.username }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+
+        <ul>
+            {% for post in posts %}
+            <li>{{ post.title }} - {{ post.author.username }}</li>
+            {% endfor %}
+        </ul>
+
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -17,10 +35,9 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                  alt="placeholder image">
+                                    alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                  alt="{{ post.title }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
@@ -51,8 +68,7 @@
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}"
-                  class="page-link">&laquo; PREV</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
