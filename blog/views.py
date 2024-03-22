@@ -8,15 +8,21 @@ from .models import Post, Comment
 from .forms import CommentForm
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
     paginate_by = 6
 
+    def get_queryset(self):
+        queryset = Post.objects.filter(status=1)
+        author_id = self.request.GET.get('user')
+        if author_id:
+            queryset = queryset.filter(author__id=author_id)
+        return queryset
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['users'] = User.objects.all()  # Add the users queryset to the context
+        # Filter users who have authored posts
+        context['users'] = User.objects.filter(blog_posts__isnull=False).distinct()
         return context
-
 
 def post_detail(request, slug):
     """
