@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
+from django_countries import countries as django_countries_list
 from .models import Post, Comment
 from .forms import CommentForm
 
@@ -14,15 +15,28 @@ class PostList(generic.ListView):
     def get_queryset(self):
         queryset = Post.objects.filter(status=1)
         author_id = self.request.GET.get('user')
+        country_code = self.request.GET.get('country')  # Get selected country code
         if author_id:
             queryset = queryset.filter(author__id=author_id)
+        if country_code:  # Check if country filter is applied
+            queryset = queryset.filter(country__iexact=country_code)
         return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         # Filter users who have authored posts
         context['users'] = User.objects.filter(blog_posts__isnull=False).distinct()
+        # Get all distinct country codes selected in blog posts
+        selected_country_codes = Post.objects.values_list('country', flat=True).distinct()
+        # Get country names corresponding to the selected country codes
+        selected_countries = [country for country in django_countries_list if country[0] in selected_country_codes]
+        # Pass the selected countries to the template
+        context['countries'] = selected_countries
+        # Pass the selected country code to the template
+        context['selected_country'] = self.request.GET.get('country')
         return context
+
+
 
 def post_detail(request, slug):
     """
