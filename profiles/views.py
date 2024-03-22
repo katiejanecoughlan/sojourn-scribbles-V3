@@ -6,7 +6,7 @@ from blog.forms import PostForm
 
 @login_required
 def profiles_me(request):
-    profiles = Profiles.objects.latest('updated_on')
+    profiles = Profiles.objects.get(user=request.user)
 
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)

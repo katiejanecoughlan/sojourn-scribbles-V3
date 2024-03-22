@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var urlParams = new URLSearchParams(window.location.search);
     var selectedUser = urlParams.get('user');
     var selectedCountry = urlParams.get('country');
-
     // Set dropdown values if parameters exist
     if (selectedUser) {
         var userDropdown = document.getElementById('user');
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error("User dropdown not found.");
         }
     }
-
     if (selectedCountry) {
         var countryDropdown = document.getElementById('country');
         if (countryDropdown) {
@@ -23,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error("Country dropdown not found.");
         }
     }
-
     // Update hidden input fields with selected values before form submission
     document.querySelectorAll('form').forEach(function(form) {
         form.addEventListener('submit', function(event) {
