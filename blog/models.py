@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django_countries.fields import CountryField
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
@@ -15,6 +16,7 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
+    country = CountryField()
     featured_image = CloudinaryField(default='placeholder', folder='blog/', null=False, blank=False)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)

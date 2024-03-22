@@ -1,4 +1,5 @@
 from django import forms
+from django_countries.fields import CountryField
 from .models import Comment
 from .models import Post
 
@@ -16,4 +17,4 @@ class PostForm(forms.ModelForm):
     """
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'featured_image','content', 'excerpt', 'status',)
+        fields = ('title', 'slug', 'country', 'featured_image','content', 'excerpt', 'status',)
