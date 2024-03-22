@@ -8,9 +8,9 @@
   <div class="row">
     <div class="col-12 col-md-4 text-center">
       {% if profiles.profile_image %}
-        <img src="{{ profiles.profile_image.url }}" width="75%" alt="{{ profiles.title }}">
+      <img src="{{ profiles.profile_image.url }}" width="75%" alt="{{ profiles.title }}">
       {% else %}
-        <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
+      <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
       {% endif %}
     </div>
     <div class="col-12 col-md-8">
@@ -21,10 +21,10 @@
   <div class="row mt-5">
     <div class="col">
       <h3>Scribble a New Journal Entry</h3>
-      <form method="post">
-        {{ comment_form | crispy }}
+      <form method="post" enctype="multipart/form-data" aria-label="Create Journal Entry">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form.media }}
+        {{ form | crispy }}
         <button type="submit" class="btn btn-primary">Post</button>
       </form>
     </div>
@@ -36,4 +36,3 @@
   </div>
 </div>
 {% endblock content %}
-

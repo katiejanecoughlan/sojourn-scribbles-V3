@@ -6,41 +6,19 @@ from blog.forms import PostForm
 
 @login_required
 def profiles_me(request):
-    """
-    Renders the most recent information on the website author.
-
-    Displays an individual instance of :model:`profiles.Profiles`.
-
-    **Context**
-    ``profiles``
-        The most recent instance of :model:`profiles.Profiles`.
-        
-    **Template**
-    :template:`profiles/profiles.html`
-    """
     profiles = Profiles.objects.latest('updated_on')
 
     if request.method == 'POST':
-        # Handle the form submission to create a new post
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            post.save()
+            post.save()  # This will automatically handle the featured_image upload to Cloudinary
             messages.success(request, 'Post created successfully.')
-            return redirect('home')  # Redirect to home page after post creation
+            return redirect('home')
         else:
-            # Display specific error messages for each field
-            for field, errors in form.errors.items():
-                for error in errors:
-                    messages.error(request, f'Error with {field}: {error}')
-
+            messages.error(request, 'Error creating post.')
     else:
-        form = PostForm()  # Instantiate an empty form
+        form = PostForm()
 
-    return render(
-        request,
-        "profiles/profiles.html",
-        {"profiles": profiles, "form": form},  # Pass the form to the template context
-    )
-
+    return render(request, "profiles/profiles.html", {"profiles": profiles, "form": form})
