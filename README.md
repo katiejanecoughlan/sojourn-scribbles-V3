@@ -30,3 +30,107 @@ free to browse the posts. To make it easy to find content for you, users can fil
  10. [ Credits and acknowledgements ](#credits-and-acknowledgements)
 
 ---
+
+# UX
+
+## Database Planning
+
+## UX Design
+
+## Wireframes
+
+##### [ Back to Top ](#table-of-contents)
+
+# Agile Development
+
+## Kanban Board
+
+## User Stories
+
+##### [ Back to Top ](#table-of-contents)
+
+# Features Implemented
+
+## Navbar and Footer
+
+## Index Page
+
+## Our Story
+
+## My Journal
+
+## Home
+
+## Authentication and Profile Management
+
+## Responsiveness
+
+##### [ Back to Top ](#table-of-contents)
+
+# Features Left to Implement
+
+- xyz
+- xyz
+
+##### [ Back to Top ](#table-of-contents)
+
+# Technology Stack
+
+- HTML - for page structure
+- CSS - for custom styling
+- Python - for the backend
+- Javascript - for event listeners on buttons
+- Django - framework used to build this project
+- Jinja - templating language rendering logic within html documents
+- Bootstrap 5 - front end framework used for styling
+- Heroku PostgreSQL - used as the database
+- Font Awesome - for social media icons
+- Google Fonts- 
+- GitHub - for storing the code and for the Kanban board
+- Heroku - for hosting and deployement of this project
+- Cloudinary - hosting the static files 
+- Git - for version control
+
+##### [ Back to Top ](#table-of-contents)
+
+# Testing and Validation
+
+## Responsiveness
+
+## Manual Testing
+
+## Code Validation
+
+##### [ Back to Top ](#table-of-contents)
+
+# Known Bugs
+
+- xyz
+- xyz
+
+##### [ Back to Top ](#table-of-contents)
+
+# Deployment 
+
+- zyz
+- zyz
+
+##### [ Back to Top ](#table-of-contents)
+
+# Resources
+
+- xyz
+- xyz
+
+##### [ Back to Top ](#table-of-contents)
+
+# Credits and Acknowledgements
+
+## Images
+
+## Code
+
+## Content
+
+##### [ Back to Top ](#table-of-contents)
+
