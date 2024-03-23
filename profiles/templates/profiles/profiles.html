@@ -7,9 +7,9 @@
   <div class="row profile-text">
     <div class="col-12 col-md-4 text-center">
         {% if profiles.profile_image %}
-            <img src="{{ profiles.profile_image.url }}" width="75%" alt="{{ profiles.title }}">
+            <img src="{{ profiles.profile_image.url }}" width="300" alt="{{ profiles.title }}">
         {% else %}
-            <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
+            <img src="{% static 'images/nobody.jpg' %}" width="300" alt="placeholder image">
         {% endif %}
     </div>
     <div class="col-12 col-md-8" id="profile-content">
@@ -48,8 +48,6 @@
        <br>
        <br>
   </div>
-</div>
-
 
 {% block scripts %}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
