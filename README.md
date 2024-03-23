@@ -86,6 +86,9 @@ The responsive website allows registered users to create blog posts (journal ent
 - Balsamiq - for wireframes
 - Canva - for creating assets
 - Font Awesome - for social media icons
+- Lucidchart - for database ER diagrams
+- Gencraft - for AI images
+- Pexels - for free stock images
 - Google Fonts- 
 - GitHub - for storing the code and for the Kanban board
 - Heroku - for hosting and deployement of this project
@@ -179,8 +182,14 @@ Creating a clone enables you to make a local copy of the repository. Follow thes
 
 # Resources
 
-- xyz
-- xyz
+- [Code Institute Full Stack Development course materials](https://codeinstitute.net/) 
+- [Django docs](https://www.djangoproject.com/)
+- [Crispy forms docs](https://django-crispy-forms.readthedocs.io/en/latest/)
+- [Cloudinary docs](https://cloudinary.com/documentation/programmable_media_overview)
+- [Bootstrap docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Stack overflow](https://stackoverflow.com/)
+- [Dev Community](https://dev.to/)
+- [Code Institude Slack](https://slack.com/)
 
 ##### [ Back to Top ](#table-of-contents)
 
@@ -195,6 +204,7 @@ Creating a clone enables you to make a local copy of the repository. Follow thes
 ## Code
 
 - **Code Institute** course content for providing the knowledge and guidance to build the project
+- GitHub user **TulaUnogi** for sharing a best practice README structure
 - Course Facilitator **David Calikes** for his unwaving support and guidance during the process 
 - Tutor **Martin McInerney** for his endless patience and support with trouble shooting issues
 - Tutor **Kevin Loughrey** for his helpful SME sessions and constant support
