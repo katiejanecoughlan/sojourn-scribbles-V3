@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
+from django.template.loader import render_to_string
 from .models import Profiles
 from .forms import ProfileForm
 from blog.forms import PostForm
@@ -27,14 +29,16 @@ def profiles_me(request):
             profile_instance.user = request.user
             profile_instance.save()
             messages.success(request, 'Profile updated successfully.')
-            return redirect('profiles')
+
+            # Fetch the updated profile instance
+            updated_profile = Profiles.objects.get(pk=profile_instance.pk)
+
+            return render(request, "profiles/profiles.html", {"profile_form": profile_form, "post_form": post_form, "profiles": updated_profile})
         else:
             messages.error(request, 'Error creating post or updating profile.')
     else:
         post_form = PostForm()
         profile_form = ProfileForm(instance=profile)
 
-    return render(request, "profiles/profiles.html", {"profile_form": profile_form, "post_form": post_form})
-
-
+    return render(request, "profiles/profiles.html", {"profile_form": profile_form, "post_form": post_form, "profiles": profile})
 

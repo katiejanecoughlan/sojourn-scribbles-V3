@@ -17,7 +17,7 @@ $(document).ready(function() {
             data: formData,
             success: function(response) {
                 // Update the static text with new data
-                $('.profile-text').html(response.content);
+                $('.profile-text .col-md-8').html(response.content);
                 $('.profile-form').hide(); // Hide the form after successful submission
             },
             error: function(xhr, status, error) {
@@ -26,5 +26,17 @@ $(document).ready(function() {
             }
         });
     });
+
+    // Event listener for form field changes
+    $('#profileForm input, #profileForm textarea').on('input', function() {
+        // Construct HTML elements to match the semantic structure
+        var formDataHtml = '<h2>' + $('#id_title').val() + '</h2>';
+        formDataHtml += '<p>' + $('#id_content').val() + '</p>';
+        // Update the static text block with the constructed HTML
+        $('.profile-text .col-md-8').html(formDataHtml);
+    });
 });
+
+
+
 

@@ -6,18 +6,19 @@
 <div class="container mt-5">
   <div class="row profile-text">
     <div class="col-12 col-md-4 text-center">
-      {% if profiles.profile_image %}
-      <img src="{{ profiles.profile_image.url }}" width="75%" alt="{{ profiles.title }}">
-      {% else %}
-      <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
-      {% endif %}
+        {% if profiles.profile_image %}
+            <img src="{{ profiles.profile_image.url }}" width="75%" alt="{{ profiles.title }}">
+        {% else %}
+            <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
+        {% endif %}
     </div>
     <div class="col-12 col-md-8">
-      <h2>{{ profiles.title }}</h2>
-      {{ profiles.content | safe }}
+        <h2>{{ profiles.title }}</h2>
+        <p>{{ profiles.content }}</p>
     </div>
     <button type="button" class="btn btn-primary" id="update-btn">Update</button>
-  </div>
+</div>
+
   <div class="row mt-5 profile-form">
     <div class="col">
       <h3>Update your Profile</h3>
