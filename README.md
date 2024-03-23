@@ -5,8 +5,7 @@
 ## A Travel Journal Blogging website
 ### Sojourn Scribbles brings together solo women travelers from around the globe, offering a platform to share experiences, insights, and camaraderie.  
 
-The responsive website allows registered users to create blog posts (journal entries) and a profile with thier bio and a photo. Users who are not registered are  
-free to browse the posts. To make it easy to find content for you, users can filter blog posts by author or country.  
+The responsive website allows registered users to create blog posts (journal entries) and a profile with thier bio and a photo. Users who are not registered are free to browse the posts. To make it easy to find content for you, users can filter blog posts by author or country.  
 
 # **[Link to Live Site](https://sojourn-scribbles-b8489dc9653c.herokuapp.com/)**  
 
@@ -84,6 +83,8 @@ free to browse the posts. To make it easy to find content for you, users can fil
 - Jinja - templating language rendering logic within html documents
 - Bootstrap 5 - front end framework used for styling
 - Heroku PostgreSQL - used as the database
+- Balsamiq - for wireframes
+- Canva - for creating assets
 - Font Awesome - for social media icons
 - Google Fonts- 
 - GitHub - for storing the code and for the Kanban board
@@ -105,7 +106,12 @@ free to browse the posts. To make it easy to find content for you, users can fil
 
 # Known Bugs
 
-- xyz
+- **There is a bug with alert message in the profiles view.**  
+The error message for the PostForm is not working as expected BUT thanks to the power of Django the user still receives red error messages within the form itself.  
+The ProfilesForm success message was incorrectly displaying when there was an error submitting the PostForm. To avoid confusion for the user, until the bug is resolved I have turned off that alert message.  
+  
+![Alert message error](/static/images/readme/ealert.png)
+
 - xyz
 
 ##### [ Back to Top ](#table-of-contents)
@@ -113,6 +119,8 @@ free to browse the posts. To make it easy to find content for you, users can fil
 # Deployment 
 
 - zyz
+![Alt Text](URL)
+
 - zyz
 
 ##### [ Back to Top ](#table-of-contents)
