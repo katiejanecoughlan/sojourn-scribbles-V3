@@ -118,10 +118,62 @@ The ProfilesForm success message was incorrectly displaying when there was an er
 
 # Deployment 
 
-- zyz
-![Alt Text](URL)
+## Deployment Guide for the Sojourn Scribbles Website
 
-- zyz
+### Deployment Steps:
+
+#### Creating the Heroku App
+
+- Begin by signing up or logging in to Heroku.
+- In the Heroku Dashboard, click on 'New' and then select 'Create New App'.
+- Choose a unique name for your project, like "Travelling Scribbles".
+- Select the EU region.
+- Click on "Create App".
+- In the "Deploy" tab, choose GitHub as the deployment method.
+- Connect your GitHub account and find/connect your GitHub repository.
+
+#### Setting Up Environment Variables
+
+- Create `env.py` in the top level of the Django app.
+- Import `os` in `env.py`.
+- Set up necessary environment variables in `env.py`, including the secret key and database URL.
+- Update `settings.py` to use environment variables for secret key and database.
+- Configure environment variables in the Heroku "Settings" tab under "Config Vars".
+- Migrate the models to the new database connection in the terminal.
+- Configure static files and templates directories in `settings.py`.
+- Add Heroku to the `ALLOWED_HOSTS` list.
+
+#### Creating Procfile and Pushing Changes
+
+- Create a `Procfile` in the top level directory.
+- Add the command to run the project in the `Procfile`.
+- Add, commit, and push the changes to GitHub.
+
+#### Heroku Deployment
+
+- In Heroku, navigate to the Deployment tab and deploy the branch manually.
+- Monitor the build logs for any errors.
+- Upon successful deployment, Heroku will display a link to the live site.
+- Make sure to resolve any deployment errors by adjusting the code as necessary.
+
+### Forking the Repository
+
+Forking the GitHub Repository allows you to create a copy of the original repository without affecting it. Follow these steps:
+
+- Log in to GitHub or create an account.
+- Visit the [repository link](https://github.com/katiejanecoughlan/sojourn-scribbles-V3).
+- Click on "Fork" at the top of the repository.
+
+### Creating a Clone of the Repository
+
+Creating a clone enables you to make a local copy of the repository. Follow these steps:
+
+- Navigate to the [Sojourn Scribbles repository](https://github.com/katiejanecoughlan/sojourn-scribbles-V3).
+- Click on the <>Code button.
+- Select the "HTTPS" option under the "Local" tab and copy the URL.
+- Open your terminal and change the directory to your desired location.
+- Use `git clone` followed by the copied repository URL.
+
 
 ##### [ Back to Top ](#table-of-contents)
 
