@@ -70,6 +70,10 @@
                         <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}"
                             href="{% url 'about' %}">Our Story</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == why_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'why' %}">Why Sojourn Scribbles?</a>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}"
