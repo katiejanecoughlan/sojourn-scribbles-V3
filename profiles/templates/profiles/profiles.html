@@ -12,11 +12,11 @@
             <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
         {% endif %}
     </div>
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-8" id="profile-content">
         <h2>{{ profiles.title }}</h2>
         <p>{{ profiles.content }}</p>
+        <button type="button" class="btn btn-primary" id="update-btn">Edit Profile</button>
     </div>
-    <button type="button" class="btn btn-primary" id="update-btn">Update</button>
 </div>
 
   <div class="row mt-5 profile-form">
@@ -30,21 +30,23 @@
       </form>
     </div>
   </div>
-  <div class="row">
-    <div class="col text-right">
-      <p class="text-end"><em>Updated on: {{ profiles.updated_on }}</em></p>
-    </div>
-  </div>
+
   <div class="row mt-5">
     <div class="col">
       <h3>Scribble a New Journal Entry</h3>
+        <div class="col text-right">
+          <p class="text-end"><em>Last journal entry: {{ profiles.updated_on }}</em></p>
+        </div>
+      </div>
       <form method="post" enctype="multipart/form-data" aria-label="Create Journal Entry" id="postForm">
         {% csrf_token %}
         {{ post_form.media }}
         {{ post_form | crispy }}
         <button type="submit" class="btn btn-primary" id="post-btn">Post</button>
       </form>
-    </div>
+       </div>
+       <br>
+       <br>
   </div>
 </div>
 

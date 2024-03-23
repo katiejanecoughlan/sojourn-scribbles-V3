@@ -6,8 +6,8 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="row">
-    <div class="col">
+<div class="row" id="filters">
+    <div class="col text-end">
         <!-- User Post Filtering -->
         <form action="{% url 'home' %}" method="get">
             <label for="user">Select User:</label>
@@ -19,7 +19,7 @@
             </select>
             <!-- Add a hidden input field for the country filter -->
             <input type="hidden" name="country" id="country_hidden">
-            <button type="submit">Filter</button>
+            <button type="submit" class="btn">Filter</button>
         </form>
 
         <ul>
@@ -28,7 +28,7 @@
             {% endfor %}
         </ul>
     </div>
-    <div class="col">
+    <div class="col text-start">
         <!-- Post Country Filtering -->
         <form action="{% url 'home' %}" method="get">
             <label for="country">Select Country:</label>
@@ -40,7 +40,7 @@
             </select>
             <!-- Add a hidden input field for the user filter -->
             <input type="hidden" name="user" id="user_hidden">
-            <button type="submit">Filter</button>
+            <button type="submit" class="btn">Filter</button>
         </form>
 
         <ul>
@@ -50,7 +50,7 @@
         </ul>
     </div>
 </div>
-</div>
+
 
 <!-- Blog Entries Column -->
 <div class="col-12 mt-3 left">
@@ -69,6 +69,7 @@
                             <p class="author">Author: {{ post.author }}</p>
                         </div>
                     </div>
+                    <div id="post-cards">
                     <a href="{% url 'post_detail' post.slug %}" class="post-link">
                         <h2 class="card-title">{{ post.title }}</h2>
                         <p class="card-text">{{ post.excerpt }}</p>
@@ -78,6 +79,7 @@
                     <p class="card-text text-muted h6">{{ post.created_on}}
                     </p>
                 </div>
+            </div>
             </div>
         </div>
         {% if forloop.counter|divisibleby:3 %}
