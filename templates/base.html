@@ -70,10 +70,6 @@
                         <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}"
                             href="{% url 'about' %}">Our Story</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == why_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'why' %}">Why Sojourn Scribbles?</a>
-                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}"
@@ -127,13 +123,13 @@
             <div class="row-sm-4">
                 <ul class="list-inline social-links">
                     <li class="list-inline-item">
-                        <a target="_blank" href="https://www.facebook.com/100071998770502/videos/6426518467373231?idorvanity=1199210663926081">
+                        <a target="_blank"
+                            href="https://www.facebook.com/100071998770502/videos/6426518467373231?idorvanity=1199210663926081">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                             <span class="sr-only">Facebook</span>
                         </a>
                     </li>
-                    <li class="list-inline-item"> <a target="_blank"
-                            href="https://github.com/katiejanecoughlan">
+                    <li class="list-inline-item"> <a target="_blank" href="https://github.com/katiejanecoughlan">
                             <i class="fa fa-github" aria-hidden="true"></i>
                             <span class="sr-only">GitHub</span>
                         </a></li>
@@ -142,8 +138,7 @@
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                             <span class="sr-only">X</span>
                         </a></li>
-                    <li class="list-inline-item"> <a target="_blank"
-                            href="https://www.instagram.com/p/BgSlRglAKBn/">
+                    <li class="list-inline-item"> <a target="_blank" href="https://www.instagram.com/p/BgSlRglAKBn/">
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                             <span class="sr-only">Instagram</span>
                         </a></li>
@@ -151,8 +146,7 @@
                             <i class="fa fa-youtube" aria-hidden="true"></i>
                             <span class="sr-only">Youtube</span>
                         </a></li>
-                    <li class="list-inline-item"> <a target="_blank"
-                            href="https://pin.it/2opf3TYru">
+                    <li class="list-inline-item"> <a target="_blank" href="https://pin.it/2opf3TYru">
                             <i class="fa fa-pinterest" aria-hidden="true"></i>
                             <span class="sr-only">Pinterest</span>
                         </a></li>
