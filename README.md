@@ -144,16 +144,27 @@ By leveraging Agile principles and utilizing the Kanban board effectively, the d
 
 ## Responsiveness
 
-## Manual Testing
-
-## Code Validation
+## Testing and Validation
 - I used the [W3 HTML Validator](https://validator.w3.org/#validate_by_input+with_options) to check the HTML on each of my site pages by Direct Input. I have resolved the necessary errors (extra </div> tags and correcting how width is set in an img tag). *However* there are some error messages remaning which are due to the content being created using Django Summernote editor in the admin panel.  
   
 - I used the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) to check my CSS script by Direct Input. I found no errors! There are 5 warnigns which are just flagging vendor extensions.
+
 ![CSS validation results](/static/images/readme/css.png)  
   
 - I used the [CI Python Linter](https://pep8ci.herokuapp.com/) to check all my python scripts. I found a few small errors like the below - mostly lines were too long or there was a missing blank space line. I have left some of the error messages as they are related to a too long line at the result of a comment.
+
 ![Python Linter Result](/static/images/readme/linter.png)
+
+- I also used the Django automated testing within my Gitpod workspace. 
+
+### Manual Testing Results
+
+**Home Page**
+| Test |Result  |
+|--|--|
+|Items display correctly on front-end when updated / added |Pass|
+|Admin can confirm or decline bookings |Pass|
+
 
 ##### [ Back to Top ](#table-of-contents)
 
