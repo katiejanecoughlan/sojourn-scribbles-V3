@@ -42,9 +42,52 @@ The responsive website allows registered users to create blog posts (journal ent
 
 # Agile Development
 
-## Kanban Board
+For the development of Sojourn Scribbles, I adopted an Agile methodology to ensure iterative and efficient progress throughout the project lifecycle. Central to this approach was the utilization of a Kanban board hosted on GitHub Projects.
 
-## User Stories
+## Kanban Board Overview
+
+The Kanban board served as a visual representation of the project's progress and allowed for effective task management. It consisted of the following sections:
+
+- **Backlog:** This section contained all the tasks and user stories that were yet to be prioritized for implementation.
+- **Ready:** Tasks and user stories ready for development were moved to this column.
+- **In Progress:** Work in progress was tracked here, indicating tasks actively being worked on.
+- **In Review:** Upon completion, tasks were moved here for review before being marked as done.
+- **Done:** Tasks that were completed successfully were moved to this column.
+- **Future Features:** Ideas and tasks earmarked for future development were kept in this section for consideration in subsequent iterations.
+
+### User Stories Integration
+
+User stories played a pivotal role in shaping the development process, ensuring that features were aligned with user needs. These user stories were mapped onto the Kanban board, guiding the prioritization and implementation of tasks. 
+
+### Task Management
+
+In addition to tracking user stories, the Kanban board served as a comprehensive task list. I utilized it to break down user stories into smaller, actionable tasks, ensuring clear and manageable objectives for development. This granular approach facilitated efficient progress tracking and enhanced team collaboration.
+
+By leveraging Agile principles and utilizing the Kanban board effectively, the development of Sojourn Scribbles remained focused, adaptable, and responsive to evolving requirements, resulting in a more robust and user-centric Django blog application.
+
+
+## User Stories Overview
+
+1. **Title:** Implement User Registration
+   - As a **user**, I can **register for an account** on Sojourn Scribbles so that **I can create and share my travel experiences with others**.
+
+2. **Title:** Enable User Authentication
+   - As a **registered user**, I can **log in** to my account on Sojourn Scribbles so that **I can access personalized features and interact with other users**.
+
+3. **Title:** Create Journal Entry Form
+   - As a **user**, I can **create journal entries** to document my travel experiences on Sojourn Scribbles so that **I can share my adventures with the community**.
+
+4. **Title:** Display Journal Posts
+   - As a **user**, I can **view journal posts** created by other users on Sojourn Scribbles so that **I can discover new travel destinations and gain inspiration for my own trips**.
+
+5. **Title:** Create Comment Functionality
+   - As a **user**, I can **comment on posts** on Sojourn Scribbles so that **I can engage with other users and discuss our experineces**.
+
+6. **Title:** Create Profile Page
+   - As a **user**, I can **create a profile** with a bio and my photo **I can save and edit my profile to customize my journal**.
+
+7. **Title:** Integrate Cloudinary API for Image Hosting
+   - As a **user**, I can **upload my travel images** to the Cloudinary API on Sojourn Scribbles so that **I can enhance my journal entries with visually appealing content**.
 
 ##### [ Back to Top ](#table-of-contents)
 
