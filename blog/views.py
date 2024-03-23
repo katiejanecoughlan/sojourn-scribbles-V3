@@ -8,6 +8,7 @@ from django_countries import countries as django_countries_list
 from .models import Post, Comment
 from .forms import CommentForm
 
+
 class PostList(generic.ListView):
     template_name = "blog/index.html"
     paginate_by = 6
@@ -27,7 +28,8 @@ class PostList(generic.ListView):
         # Filter users who have authored posts
         context['users'] = User.objects.filter(blog_posts__isnull=False).distinct()
         # Get all distinct country codes selected in blog posts
-        selected_country_codes = Post.objects.values_list('country', flat=True).distinct()
+        selected_country_codes = Post.objects.values_list('country',
+                                                          flat=True).distinct()
         # Get country names corresponding to the selected country codes
         selected_countries = [country for country in django_countries_list if country[0] in selected_country_codes]
         # Pass the selected countries to the template
@@ -35,7 +37,6 @@ class PostList(generic.ListView):
         # Pass the selected country code to the template
         context['selected_country'] = self.request.GET.get('country')
         return context
-
 
 
 def post_detail(request, slug):
@@ -94,6 +95,7 @@ def post_detail(request, slug):
         },
     )
 
+
 @login_required
 def comment_edit(request, slug, comment_id):
     """
@@ -118,6 +120,7 @@ def comment_edit(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
 @login_required
 def comment_delete(request, slug, comment_id):
     """
@@ -140,12 +143,12 @@ def comment_delete(request, slug, comment_id):
 @login_required
 def post_delete(request, slug):
     post = get_object_or_404(Post, slug=slug)
-    
+
     # Check if the current user is the author of the post
     if request.user == post.author:
         post.delete()
         messages.success(request, 'Post deleted successfully!')
     else:
         messages.error(request, 'You can only delete your own posts!')
-    
+
     return HttpResponseRedirect(reverse('home'))  # Redirect to the post list page after deletion

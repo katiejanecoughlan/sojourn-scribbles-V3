@@ -3,8 +3,7 @@ from django.contrib.auth.models import User
 from django_countries.fields import CountryField
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
-STATUS = ((1, "Published"),) #removed draft option and added comma because django expects a tupple
+STATUS = ((1, "Published"),)  # removed draft option and added comma because django expects a tupple
 
 
 class Post(models.Model):
@@ -17,7 +16,8 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     country = CountryField()
-    featured_image = CloudinaryField(default='placeholder', folder='blog/', null=False, blank=False)
+    featured_image = CloudinaryField(default='placeholder',
+                                     folder='blog/', null=False, blank=False)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=1)

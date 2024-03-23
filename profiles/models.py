@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.core.validators import MaxLengthValidator
 from cloudinary.models import CloudinaryField
 
+
 class Profiles(models.Model):
     """
     Represents a user profile containing a bio, title, profile image, and post content.
