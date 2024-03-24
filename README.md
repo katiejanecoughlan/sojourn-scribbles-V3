@@ -39,8 +39,17 @@ I have included the About model for visibility sake eventhough it does not direc
 While I used the default Django User setup and it is not a custom model, it is included in the diagram for clarity sake.
 ![Database Entity Relationship Lucidchart Diagram](/static/images/readme/Database%20ER%20diagram%20(Sojourn%20Scribbles).png)
 
-
 ## UX Design
+
+### Overview
+Sojourn Scribbles is envisioned as a modern, vibrant, and inclusive platform tailored specifically for solo female travelers. The UX design focuses on creating an engaging and welcoming environment that reflects the spirit of exploration and camaraderie. With a fun and feminine aesthetic, the site aims to foster connections, inspire wanderlust, and celebrate the diverse experiences of solo female travelers.
+
+### Site User
+The primary users of Sojourn Scribbles are solo female travelers from diverse backgrounds and ages, each with their own unique travel stories and perspectives. These users seek a supportive and inclusive community where they can share their adventures, seek advice, and connect with others who share their passion for exploration. They value authenticity, empathy, and the opportunity to engage with like-minded individuals in a safe and welcoming space.
+
+### Goal
+Sojourn Scribbles aims to empower solo female travelers by providing a platform where they can share their experiences, find inspiration for future trips, and build meaningful connections with fellow adventurers. Through authentic storytelling, travel tips, and community engagement, the site strives to create a supportive environment where users feel encouraged to share their stories, seek advice, and support one another in their journeys. The goal is to cultivate a vibrant and inclusive community that celebrates the strength, resilience, and spirit of solo female travelers, while also providing valuable resources and inspiration for their adventures.
+
 
 ## Wireframes
 
