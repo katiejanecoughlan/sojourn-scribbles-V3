@@ -6,11 +6,7 @@
 <div class="container mt-5">
   <div class="row profile-text">
     <div class="col-12 col-md-4 text-center">
-      {% if profiles.profile_image %}
-      <img src="{{ profiles.profile_image.url }}" class="profile-photo" alt="{{ profiles.journal_title }}">
-      {% else %}
       <img src="{% static 'images/nobody.jpg' %}" class="profile-photo" alt="placeholder image">
-      {% endif %}
     </div>
 
     <div class="col-12 col-md-8" id="profile-content">
@@ -19,15 +15,15 @@
       <p>{{ profiles.bio }}</p>
       <br>
       <h5>Update your Profile</h3>
-      <br>
-      <button type="button" class="btn btn-primary" id="update-btn">Edit Profile</button>
+        <br>
+        <button type="button" class="btn btn-primary" id="update-btn">Edit Profile</button>
     </div>
   </div>
 
   <div class="row mt-5 profile-form">
     <div class="col">
       <form method="post" enctype="multipart/form-data" aria-label="Update your Profile" id="profileForm">
-                {% csrf_token %}
+        {% csrf_token %}
         {{ profile_form.media }}
         {{ profile_form | crispy }}
         <button type="submit" class="btn btn-primary" id="save-btn">Save</button>
