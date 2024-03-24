@@ -183,7 +183,7 @@ The ProfilesForm success message was incorrectly displaying when there was an er
  ![Summernote Error](/static/images/readme/esummernote.png)
 
  - **There is a bug with the favicon site.webmanifest file**
- The below console error messages are related to the site.webmanifest file for my favicon. I tested removing the link to this file at the top of my base.html and the console was free of erros. However, based on some research I have decided to leave the file in because it's crucial for Progressive Web Apps (PWAs), providing essential metadata such as the application's name, icons, theme colors, and display mode to browsers. However, potential bugs or unexpected behavior may arise due to syntax errors, misconfigurations, or conflicts with other components. Acknowledging these issues emphasizes commitment to resolving them, ensuring the application meets PWA standards and delivers an optimal user experience.
+ The below console error messages are related to the site.webmanifest file for my favicon. I tested removing the link to this file at the top of my base.html and the console was free of erros. However, based on some research I have decided to leave the file in because it's crucial for Progressive Web Apps (PWAs), providing essential metadata such as the application's name, icons, theme colors, and display mode to browsers. However, potential bugs or unexpected behavior may arise due to syntax errors, misconfigurations, or conflicts with other components. Acknowledging these issues emphasizes my commitment to resolving them, ensuring the application meets PWA standards and delivers an optimal user experience.
  ![site.webmanifest console error](/static/images/readme/ewebmanifest.png)
 
 ##### [ Back to Top ](#table-of-contents)

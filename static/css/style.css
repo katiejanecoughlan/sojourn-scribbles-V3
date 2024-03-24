@@ -75,10 +75,21 @@ body {
     font-weight: 600;
 }
 
+/* --About Page-- */
+.about-logo {
+    max-width: 90%;
+    height: auto;
+}
+
 /* -- Profile Page -- */
 
 #update-btn {
     max-width: fit-content;
+}
+
+.profile-photo {
+    max-width: 90%;
+    height: auto; 
 }
 
 /* --Post View-- */
@@ -199,3 +210,11 @@ body {
 #footer-details {
     color: #FFFFFF;
   }
+
+  /* -- Media Queries -- */
+
+  /* @media screen and (max-width: 475px) {
+
+  } */
+
+

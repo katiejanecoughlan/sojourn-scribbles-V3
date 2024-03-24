@@ -7,12 +7,14 @@
   <div class="row profile-text">
     <div class="col-12 col-md-4 text-center">
         {% if profiles.profile_image %}
-            <img src="{{ profiles.profile_image.url }}" width="300" alt="{{ profiles.title }}">
+            <img src="{{ profiles.profile_image.url }}" class="profile-photo" alt="{{ profiles.title }}">
         {% else %}
-            <img src="{% static 'images/nobody.jpg' %}" width="300" alt="placeholder image">
+            <img src="{% static 'images/nobody.jpg' %}" class="profile-photo" alt="placeholder image">
         {% endif %}
     </div>
+ 
     <div class="col-12 col-md-8" id="profile-content">
+      <br>  <!-- Line break for responsiveness on smaller screens -->
         <h2>{{ profiles.title }}</h2>
         <p>{{ profiles.content }}</p>
         <button type="button" class="btn btn-primary" id="update-btn">Edit Profile</button>
