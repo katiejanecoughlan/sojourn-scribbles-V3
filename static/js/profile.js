@@ -36,7 +36,3 @@ $(document).ready(function() {
         $('.profile-text .col-md-8').html(formDataHtml);
     });
 });
-
-
-
-

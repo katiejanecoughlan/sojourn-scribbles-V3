@@ -32,7 +32,7 @@ def profiles_me(request):
             profile_instance = profile_form.save(commit=False)
             profile_instance.user = request.user
             profile_instance.save()
-            # messages.success(request, 'Profile updated successfully.') #Disabled due to bug
+            # messages.success(request, 'Profile updated successfully.')  # Disabled due to bug
 
             # Fetch the updated profile instance
             updated_profile = Profiles.objects.get(pk=profile_instance.pk)
