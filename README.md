@@ -254,6 +254,7 @@ Creating a clone enables you to make a local copy of the repository. Follow thes
 - [Code Institute Full Stack Development course materials](https://codeinstitute.net/) 
 - [Django docs](https://www.djangoproject.com/)
 - [Crispy forms docs](https://django-crispy-forms.readthedocs.io/en/latest/)
+- [jQuery docs](https://learn.jquery.com/using-jquery-core/avoid-conflicts-other-libraries/#:~:text=Thus%2C%20if%20you%20are%20using,use%20jQuery%20in%20your%20page.)
 - [Cloudinary docs](https://cloudinary.com/documentation/programmable_media_overview)
 - [Bootstrap docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Stack overflow](https://stackoverflow.com/)
