@@ -44,6 +44,22 @@ While I used the default Django User setup and it is not a custom model, it is i
 
 ## Wireframes
 
+I used Balsamiq to create my wireframes. The final product looks a bit different to original intentions but served as a good guide nonetheless. The wireframes contain a lot of detail about the future vision and long term plan for Sojourn Scribbes with future features. These features were not possible due to the scope of the current project for the time contrainsts given. 
+
+![Plan overview](/static/images/readme/Plan.png)
+
+The origional intention was for the profile section, posts and reccomendations (future feature) to all be on the same page. Upon review this would have been overloading the page a bit.
+
+![Home page wireframe](/static/images/readme/Home.png)
+
+After reassessing that set up I created another wireframe for the profile page - the final structure of this is slightly differnt in that the two sections are stacked horizontally not vertically.
+
+![Profile wireframe](/static/images/readme/Profile.png)
+
+Next we have the navbar and footer - the end product of both turned out nearly the same as the wireframe with just the filter function seperated from the navbar since it wouldn't be relevant for all pages.
+
+![Navbar and footer wireframe](/static/images/readme/NavFoot.png)
+
 ##### [ Back to Top ](#table-of-contents)
 
 # Agile Development
