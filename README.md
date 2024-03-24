@@ -22,7 +22,7 @@ The responsive website allows registered users to create blog posts (journal ent
  3. [ Features implemented ](#features-implemented)  
  4. [ Features Left to Implement ](#features-left-to-implement)  
  5. [ Technology used ](#technology-used) 
- 6. [ Testing ](#testing)  
+ 6. [ Testing ](#Testing and Validation)  
  7. [ Bugs ](#known-bugs)  
  8. [ Deployment](#deployment)
  9. [ Resources ](#resources)  
@@ -170,8 +170,10 @@ By leveraging Agile principles and utilizing the Kanban board effectively, the d
 | Edit and delete comment functionality   | Pass   |
 | User must be logged in to comment/edit/delete | Pass |
 | User must be logged in to delete blog post  | Pass |
-| User cannot delete/edit others' posts/comments | Pass |
+| User cannot delete/edit others' comments | Pass |
 | Comments require admin approval         | Pass   |
+| Prevention of deleting other users' posts  | Pass   |
+| Prevention of posting as other users        | Pass   |
 
 ### ABOUT PAGE
 
@@ -217,6 +219,15 @@ By leveraging Agile principles and utilizing the Kanban board effectively, the d
 |----------------------------------------|--------|
 | Logout functionality                   | Pass   |
 | Redirect after successful logout       | Pass   |
+
+### SECURITY
+
+| Test                                                             | Result |
+|-----------------------------------------------------------------|--------|
+| Prevention of brute force actions via URL                        | Pass   |
+| Redirect to sign-in page after attempted unauthorized action | Pass   |
+  
+![Redirect after brute force attempt](/static/images/readme/bruteforce.png)
 
 ##### [ Back to Top ](#table-of-contents)
 
