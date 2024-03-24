@@ -178,10 +178,21 @@ By leveraging Agile principles and utilizing the Kanban board effectively, the d
 
 ##### [ Back to Top ](#table-of-contents)
 
-# Features Left to Implement
+# Future Features
 
-- xyz
-- xyz
+- **Community Engagement:**
+  - Implement a user interaction feature where users can follow each other, fostering a sense of camaraderie and enabling content discovery within the community.
+  - Enable users to view each other's profiles, facilitating connections and allowing users to learn more about fellow travelers' interests and experiences.
+  - Provide users with a log of their published posts on their profile page, promoting self-reflection and making it easier for users to revisit their past contributions.
+
+- **Enhanced Recommendations:**
+  - Introduce a recommendations section within posts, allowing users to share travel tips and insights with the community, enhancing the platform's value as a travel resource.
+  - Enable users to save recommendations for future reference, creating personalized collections of travel advice tailored to their interests and preferences.
+  - Utilize the Google Maps API to enrich the recommendations section, offering users visual representations of recommended locations and aiding in travel planning.
+
+- **Improved Search Functionality:**
+  - Implement a search bar to empower users to find specific content on the website, improving usability and content discoverability.
+  - This feature expands the navigation options beyond existing filters, providing users with greater flexibility in exploring the diverse content available on the platform.
 
 ##### [ Back to Top ](#table-of-contents)
 
