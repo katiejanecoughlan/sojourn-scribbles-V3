@@ -6,25 +6,25 @@
 <div class="container mt-5">
   <div class="row profile-text">
     <div class="col-12 col-md-4 text-center">
-        {% if profiles.profile_image %}
-            <img src="{{ profiles.profile_image.url }}" class="profile-photo" alt="{{ profiles.title }}">
-        {% else %}
-            <img src="{% static 'images/nobody.jpg' %}" class="profile-photo" alt="placeholder image">
-        {% endif %}
+      {% if profiles.profile_image %}
+      <img src="{{ profiles.profile_image.url }}" class="profile-photo" alt="{{ profiles.journal_title }}">
+      {% else %}
+      <img src="{% static 'images/nobody.jpg' %}" class="profile-photo" alt="placeholder image">
+      {% endif %}
     </div>
- 
+
     <div class="col-12 col-md-8" id="profile-content">
-      <br>  <!-- Line break for responsiveness on smaller screens -->
-        <h2>{{ profiles.title }}</h2>
-        <p>{{ profiles.content }}</p>
-        <button type="button" class="btn btn-primary" id="update-btn">Edit Profile</button>
+      <br> <!-- Line break for responsiveness on smaller screens -->
+      <h2>{{ profiles.journal_title }}</h2>
+      <p>{{ profiles.bio }}</p>
+      <button type="button" class="btn btn-primary" id="update-btn">Edit Profile</button>
     </div>
-</div>
+  </div>
 
   <div class="row mt-5 profile-form">
     <div class="col">
-      <h3>Update your Profile</h3>
       <form method="post" enctype="multipart/form-data" aria-label="Update your Profile" id="profileForm">
+        <h3>Update your Profile</h3>
         {% csrf_token %}
         {{ profile_form.media }}
         {{ profile_form | crispy }}
@@ -36,23 +36,22 @@
   <div class="row mt-5">
     <div class="col">
       <h3>Scribble a New Journal Entry</h3>
-        <div class="col text-right">
-          <p class="text-end"><em>Last journal entry: {{ profiles.updated_on }}</em></p>
-        </div>
+      <div class="col text-right">
+        <p class="text-end"><em>Last journal entry: {{ profiles.updated_on }}</em></p>
       </div>
-      <form method="post" enctype="multipart/form-data" aria-label="Create Journal Entry" id="postForm">
-        {% csrf_token %}
-        {{ post_form.media }}
-        {{ post_form | crispy }}
-        <button type="submit" class="btn btn-primary" id="post-btn">Post</button>
-      </form>
-       </div>
-       <br>
-       <br>
+    </div>
+    <form method="post" enctype="multipart/form-data" aria-label="Create Journal Entry" id="postForm">
+      {% csrf_token %}
+      {{ post_form.media }}
+      {{ post_form | crispy }}
+      <button type="submit" class="btn btn-primary" id="post-btn">Post</button>
+    </form>
   </div>
+  <br>
+  <br>
+</div>
 
 {% block scripts %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/static/js/profile.js"></script>
 {% endblock %}
 

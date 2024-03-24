@@ -179,12 +179,21 @@ The ProfilesForm success message was incorrectly displaying when there was an er
 
 - **There is a bug with handling input from Django Summernote to the Profile Form.**
  If you fill in the Profile Form from the admin panel the output is rendered with all of the coding tags visible and not formatted.  
- Thankfully, the users don't have access to the admin panel and can only create their profile from the form on the website so it is not posssible for them to experience this bug!
+ Thanks to Django, the users don't have access to the admin panel and can only create their profile from the form on the website so it is not posssible for them to experience this bug!
  ![Summernote Error](/static/images/readme/esummernote.png)
 
  - **There is a bug with the favicon site.webmanifest file**
  The below console error messages are related to the site.webmanifest file for my favicon. I tested removing the link to this file at the top of my base.html and the console was free of erros. However, based on some research I have decided to leave the file in because it's crucial for Progressive Web Apps (PWAs), providing essential metadata such as the application's name, icons, theme colors, and display mode to browsers. However, potential bugs or unexpected behavior may arise due to syntax errors, misconfigurations, or conflicts with other components. Acknowledging these issues emphasizes my commitment to resolving them, ensuring the application meets PWA standards and delivers an optimal user experience.
  ![site.webmanifest console error](/static/images/readme/ewebmanifest.png)
+
+ - **There is a bug with image handling on the Profile page**
+ I have a field to upload a profile image on the profile form, however there is a conflict with jQuery and my profile.js file. This conflict results in breaking the image handling - it does not display on the profile page nor is it uploaded to cloudinary.  
+ I tried my best to resolve this issue but unfortunately it was not possible within the given time contraints based on the relative importance of the feature.  
+ Some things I tired:  
+  -- using jQuery no conflict var in different ways  
+  -- loading the jQuery script in profile.js, base.html and profiles.html  
+  -- restructuring the JS file  
+  To avoid causing confusion for the user, I made the decision to remove the image upload field from the Profile form. The impact of this is that the user cannot customize their profile photo. Although the action is available in the admin panel so if the user is especially eager they can use the handly contact form to provide a link to their image!
 
 ##### [ Back to Top ](#table-of-contents)
 

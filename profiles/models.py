@@ -10,10 +10,10 @@ class Profiles(models.Model):
 
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    title = models.CharField(max_length=200)
+    journal_title = models.CharField(max_length=200)
     profile_image = CloudinaryField(default='placeholder', folder='profile/', null=False, blank=False)
     updated_on = models.DateTimeField(auto_now=True)
-    content = models.TextField(validators=[MaxLengthValidator(2000)])
+    bio = models.TextField(validators=[MaxLengthValidator(2000)])
 
     def __str__(self):
-        return self.title
+        return self.journal_title
