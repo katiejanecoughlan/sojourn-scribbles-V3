@@ -124,19 +124,57 @@ By leveraging Agile principles and utilizing the Kanban board effectively, the d
 
 # Features Implemented
 
-## Navbar and Footer
+## Home Page:
+  - Blog posts are displayed as cards.
+  - Filters (user and country) functionality allows users to filter posts.
+  - Users can click on a blog card to read the entire post.
+  - Commenting functionality allows users to comment on blog posts.
+  - Users can edit and delete their own comments.
+  - Users must be logged in to comment, edit, or delete comments.
+  - Users must be logged in to delete their own blog posts.
+  - Users cannot delete or edit blog posts or comments created by other users.
+  - Comments require admin approval.
 
-## Index Page
+## About Page:
+  - Provides an overview of Sojourn Scribbles and its aims.
+  - Includes a feedback form for users to share their feedback.
+  - Accessible without the need for user authentication.
 
-## Our Story
+## Footer/Nav Bar:
+  - Navigation links facilitate easy navigation throughout the website.
+  - Social media links direct users to Sojourn Scribbles' social media pages.
 
-## My Journal
+## Profile Page:
+  - Access requires user authentication.
+  - Users can edit their profile information (bio and title).
+  - Profile editing is done through a form toggled by an "Edit Profile" button.
+  - Users can create blog posts, including uploading images.
+  - After submitting a post, users are redirected to the home page to view their published post.
 
-## Home
+## Login Page:
+  - Secure signup functionality allows users to register securely.
+  - Successful login redirects users to the home page.
 
-## Authentication and Profile Management
+## Registration Page:
+  - Secure login functionality allows users to log in securely.
+  - Successful registration redirects users to the home page.
 
-## Responsiveness
+## Logout Page:
+  - Logout functionality allows users to sign out securely.
+  - After successful logout, users are redirected to the home page.
+
+### Responsive Design:
+
+   - The website is designed to be responsive, ensuring optimal usability across various screen sizes.
+   - Navbar collapses into a burger bar for improved navigation on smaller screens.
+   - Masthead images are omitted from individual blog posts on smaller screens to enhance readability and aesthetics.
+
+## Additional Security Features:
+
+   - Prevention of brute force actions via URL.
+   - Users are redirected to the sign-in page with an unauthorized action notification if they attempt unauthorized actions.
+   - Prevention of users deleting other users' posts.
+   - Prevention of users posting as other users.
 
 ##### [ Back to Top ](#table-of-contents)
 
