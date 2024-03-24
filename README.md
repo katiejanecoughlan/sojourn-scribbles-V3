@@ -159,12 +159,64 @@ By leveraging Agile principles and utilizing the Kanban board effectively, the d
 
 ### Manual Testing Results
 
-**Home Page**
-| Test |Result  |
-|--|--|
-|Items display correctly on front-end when updated / added |Pass|
-|Admin can confirm or decline bookings |Pass|
+### HOME PAGE
 
+| Test                                     | Result |
+|-----------------------------------------|--------|
+| Blog posts displayed as cards           | Pass   |
+| Filters (user and country) functionality| Pass   |
+| Ability to click on a blog card         | Pass   |
+| Commenting functionality                | Pass   |
+| Edit and delete comment functionality   | Pass   |
+| User must be logged in to comment/edit/delete | Pass |
+| User must be logged in to delete blog post  | Pass |
+| User cannot delete/edit others' posts/comments | Pass |
+| Comments require admin approval         | Pass   |
+
+### ABOUT PAGE
+
+| Test                                     | Result |
+|-----------------------------------------|--------|
+| Overview of Sojourn Scribbles           | Pass   |
+| Feedback form functionality             | Pass   |
+| Accessible without login                | Pass   |
+
+### FOOTER/NAV BAR
+
+| Test                                     | Result |
+|-----------------------------------------|--------|
+| Navigation links functionality          | Pass   |
+| Social media links functionality        | Pass   |
+
+### PROFILE PAGE
+
+| Test                                     | Result |
+|-----------------------------------------|--------|
+| Access requires login                   | Pass   |
+| Edit profile form functionality        | Pass   |
+| Post creation functionality             | Pass   |
+| Redirect after post submission          | Pass   |
+
+### LOGIN PAGE
+
+| Test                                    | Result |
+|----------------------------------------|--------|
+| Secure signup functionality            | Pass   |
+| Redirect after successful login        | Pass   |
+
+### REGISTRATION PAGE
+
+| Test                                    | Result |
+|----------------------------------------|--------|
+| Secure login functionality             | Pass   |
+| Redirect after successful registration | Pass   |
+
+### LOGOUT PAGE
+
+| Test                                    | Result |
+|----------------------------------------|--------|
+| Logout functionality                   | Pass   |
+| Redirect after successful logout       | Pass   |
 
 ##### [ Back to Top ](#table-of-contents)
 
