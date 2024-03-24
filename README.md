@@ -212,7 +212,7 @@ By leveraging Agile principles and utilizing the Kanban board effectively, the d
 - Lucidchart - for database ER diagrams
 - Gencraft - for AI images
 - Pexels - for free stock images
-- Google Fonts- 
+- Google Fonts- for custom font styling
 - GitHub - for storing the code and for the Kanban board
 - Heroku - for hosting and deployement of this project
 - Cloudinary - hosting the static files 
@@ -355,7 +355,7 @@ The ProfilesForm success message was incorrectly displaying when there was an er
  ![Summernote Error](/static/images/readme/esummernote.png)
 
  - **There is a bug with the favicon site.webmanifest file**
- The below console error messages are related to the site.webmanifest file for my favicon. I tested removing the link to this file at the top of my base.html and the console was free of erros. However, based on some research I have decided to leave the file in because it's crucial for Progressive Web Apps (PWAs), providing essential metadata such as the application's name, icons, theme colors, and display mode to browsers. However, potential bugs or unexpected behavior may arise due to syntax errors, misconfigurations, or conflicts with other components. Acknowledging these issues emphasizes my commitment to resolving them, ensuring the application meets PWA standards and delivers an optimal user experience.
+ The below console error messages are related to the site.webmanifest file for my favicon. I tested removing the link to this file at the top of my base.html and the console was free of errors. However, based on some research I have decided to leave the file in because it's crucial for Progressive Web Apps (PWAs), providing essential metadata such as the application's name, icons, theme colors, and display mode to browsers. However, potential bugs or unexpected behavior may arise due to syntax errors, misconfigurations, or conflicts with other components. Acknowledging these issues emphasizes my commitment to resolving them, ensuring the application meets PWA standards and delivers an optimal user experience.
  ![site.webmanifest console error](/static/images/readme/ewebmanifest.png)
 
  - **There is a bug with image handling on the Profile page**
@@ -461,8 +461,6 @@ Creating a clone enables you to make a local copy of the repository. Follow thes
 - Tutor **Kevin Loughrey** for his helpful SME sessions and constant support
 - My mentor **Chris Quinn** for sharing his wisdom and guiding me in this project
 - My fellow **cohort peers** for their support, help with trouble shooting issues and sharing the experience
-
-## Content
 
 ##### [ Back to Top ](#table-of-contents)
 
