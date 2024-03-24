@@ -14,16 +14,23 @@ class PostList(generic.ListView):
     paginate_by = 6
 
     def get_queryset(self):
+        """
+        view for drop down filters for filtering post by user and country
+        """ 
         queryset = Post.objects.filter(status=1)
         author_id = self.request.GET.get('user')
-        country_code = self.request.GET.get('country')  # Get selected country code
+        country_code = self.request.GET.get('country')
         if author_id:
             queryset = queryset.filter(author__id=author_id)
-        if country_code:  # Check if country filter is applied
+        if country_code:
             queryset = queryset.filter(country__iexact=country_code)
         return queryset
 
     def get_context_data(self, **kwargs):
+        """
+        drop down filters for filtering post by user and country
+        filters only contain user/country with a relevant post
+        """           
         context = super().get_context_data(**kwargs)
         # Filter users who have authored posts
         context['users'] = User.objects.filter(blog_posts__isnull=False).distinct()
@@ -143,8 +150,9 @@ def comment_delete(request, slug, comment_id):
 @login_required
 def post_delete(request, slug):
     post = get_object_or_404(Post, slug=slug)
-
-    # Check if the current user is the author of the post
+    """
+    view to delete post
+    """
     if request.user == post.author:
         post.delete()
         messages.success(request, 'Post deleted successfully!')

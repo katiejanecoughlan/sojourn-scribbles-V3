@@ -6,7 +6,7 @@ from cloudinary.models import CloudinaryField
 
 class Profiles(models.Model):
     """
-    Represents a user profile containing a bio, title, profile image, and post content.
+    Represents a user profile containing a bio and title.
 
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)

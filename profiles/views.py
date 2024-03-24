@@ -10,6 +10,15 @@ from blog.forms import PostForm
 
 @login_required
 def profiles_me(request):
+    """
+    View function for the user's profile page.
+
+    Retrieves the profile associated with the currently logged-in user and handles
+    POST requests to create posts or update the user's profile information.
+    Displays the latest instance of the ProfileForm.
+    Displays a blank PostForm ready for submission and a ProfileForm toggled by a btn.
+
+    """
     profiles_queryset = Profiles.objects.filter(user=request.user)
     if profiles_queryset.exists():
         profile = profiles_queryset.first()
