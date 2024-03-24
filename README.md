@@ -22,7 +22,7 @@ The responsive website allows registered users to create blog posts (journal ent
  3. [ Features implemented ](#features-implemented)  
  4. [ Features Left to Implement ](#features-left-to-implement)  
  5. [ Technology used ](#technology-used) 
- 6. [ Testing ](#Testing and Validation)  
+ 6. [ Testing ](#testing-and-Validation)  
  7. [ Bugs ](#known-bugs)  
  8. [ Deployment](#deployment)
  9. [ Resources ](#resources)  
@@ -33,6 +33,12 @@ The responsive website allows registered users to create blog posts (journal ent
 # UX
 
 ## Database Planning
+
+I used Lucidchart to create my database entity relationship diagrams. Below you can see how each model relates to eachother.  
+I have included the About model for visibility sake eventhough it does not directly relate to anything else (user does not have to be logged in to view the content/submit the form on that page).  
+While I used the default Django User setup and it is not a custom model, it is included in the diagram for clarity sake.
+![Database Entity Relationship Lucidchart Diagram](/static/images/readme/Database%20ER%20diagram%20(Sojourn%20Scribbles).png)
+
 
 ## UX Design
 
