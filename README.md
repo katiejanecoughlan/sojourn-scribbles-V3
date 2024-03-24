@@ -176,7 +176,11 @@ The ProfilesForm success message was incorrectly displaying when there was an er
   
 ![Alert message error](/static/images/readme/ealert.png)
 
-- xyz
+
+- **There is a bug with handling input from Django Summernote to the Profile Form.**
+ If you fill in the Profile Form from the admin panel the output is rendered with all of the coding tags visible and not formatted.  
+ Thankfully, the users don't have access to the admin panel and can only create their profile from the form on the website so it is not posssible for them to experience this bug!
+ ![Summernote Error](/static/images/readme/esummernote.png)
 
 ##### [ Back to Top ](#table-of-contents)
 
