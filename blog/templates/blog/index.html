@@ -70,16 +70,16 @@
                         </div>
                     </div>
                     <div id="post-cards">
-                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                        <h2 class="card-title">{{ post.title }}</h2>
-                        <p class="card-text">{{ post.excerpt }}</p>
-                    </a>
+                        <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                            <p class="card-text">{{ post.excerpt }}</p>
+                        </a>
 
-                    <hr />
-                    <p class="card-text text-muted h6">{{ post.created_on}}
-                    </p>
+                        <hr />
+                        <p class="card-text text-muted h6">{{ post.created_on}}
+                        </p>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
         {% if forloop.counter|divisibleby:3 %}

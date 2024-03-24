@@ -224,6 +224,35 @@ By leveraging Agile principles and utilizing the Kanban board effectively, the d
 
 ## Responsiveness
 
+I used the dev tools on chrome to test the website for responsiveness. I captured screenshots to demonstrate responsive design across mobile, tablet and laptop based on the size configurations preset in dev tools.  
+Some particular features to note:
+-- Navbar collapses to a burger bar on smaller screen sizes
+-- There is no image in the masthead within a blog post on smaller screen sizes
+-- Content stacks vertically instaed of horizonstally on smaller screen sizes
+-- The smaller the screen the less blog post cards visible on the home page
+
+### The Profile Page
+
+**Laptop**
+![Screenshot of profile page view on laptop](/static/images/readme/lappro.png)
+
+**Tablet**
+![Screenshot of profile page view on tablet](/static/images/readme/tabpro.png)
+
+**Mobile**
+![Screenshot of profile page view on mobile](/static/images/readme/mobpro.png)
+
+### Other Examples
+
+**Laptop**
+![Screenshot of about page view on laptop](/static/images/readme/lapabo.png)
+
+**Tablet**
+![Screenshot of a post view on tablet](/static/images/readme/tabpos.png)
+
+**Mobile**
+![Screenshot of the home page view on mobile](/static/images/readme/mobhom.png)
+
 ## Testing and Validation
 - I used the [W3 HTML Validator](https://validator.w3.org/#validate_by_input+with_options) to check the HTML on each of my site pages by Direct Input. I have resolved the necessary errors (extra </div> tags and correcting how width is set in an img tag). *However* there are some error messages remaning which are due to the content being created using Django Summernote editor in the admin panel.  
   
