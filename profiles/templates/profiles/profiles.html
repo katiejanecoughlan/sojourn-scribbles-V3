@@ -17,6 +17,9 @@
       <br> <!-- Line break for responsiveness on smaller screens -->
       <h2>{{ profiles.journal_title }}</h2>
       <p>{{ profiles.bio }}</p>
+      <br>
+      <h5>Update your Profile</h3>
+      <br>
       <button type="button" class="btn btn-primary" id="update-btn">Edit Profile</button>
     </div>
   </div>
@@ -24,8 +27,7 @@
   <div class="row mt-5 profile-form">
     <div class="col">
       <form method="post" enctype="multipart/form-data" aria-label="Update your Profile" id="profileForm">
-        <h3>Update your Profile</h3>
-        {% csrf_token %}
+                {% csrf_token %}
         {{ profile_form.media }}
         {{ profile_form | crispy }}
         <button type="submit" class="btn btn-primary" id="save-btn">Save</button>
