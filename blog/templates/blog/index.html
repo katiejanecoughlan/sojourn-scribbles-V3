@@ -17,11 +17,12 @@
                 <option value="{{ user.id }}">{{ user.username }}</option>
                 {% endfor %}
             </select>
+            <br> <!-- Spacing responsiveness -->
             <!-- Add a hidden input field for the country filter -->
             <input type="hidden" name="country" id="country_hidden">
+            <br> <!-- Spacing responsiveness -->
             <button type="submit" class="btn" aria-label="filter button">Filter</button>
         </form>
-
         <ul>
             {% for post in posts %}
             <li>{{ post.title }} - {{ post.author.username }}</li>
@@ -38,11 +39,12 @@
                 <option value="{{ country.code }}">{{ country.name }}</option>
                 {% endfor %}
             </select>
+            <br> <!-- Spacing responsiveness -->
             <!-- Add a hidden input field for the user filter -->
             <input type="hidden" name="user" id="user_hidden">
+            <br> <!-- Spacing responsiveness -->
             <button type="submit" class="btn" aria-label="filter button">Filter</button>
         </form>
-
         <ul>
             {% for post in filtered_posts %}
             <li>{{ post.title }} - {{ post.country.name }}</li>
@@ -50,7 +52,6 @@
         </ul>
     </div>
 </div>
-
 
 <!-- Blog Entries Column -->
 <div class="col-12 mt-3 left">
