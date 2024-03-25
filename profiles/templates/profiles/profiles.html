@@ -16,7 +16,7 @@
       <br>
       <h5>Update your Profile</h3>
         <br>
-        <button type="button" class="btn btn-primary" id="update-btn">Edit Profile</button>
+        <button type="button" class="btn btn-primary" id="update-btn" aria-label="edit button">Edit Profile</button>
     </div>
   </div>
 
@@ -26,7 +26,7 @@
         {% csrf_token %}
         {{ profile_form.media }}
         {{ profile_form | crispy }}
-        <button type="submit" class="btn btn-primary" id="save-btn">Save</button>
+        <button type="submit" class="btn btn-primary" id="save-btn" aria-label="save button">Save</button>
       </form>
     </div>
   </div>
@@ -42,7 +42,7 @@
       {% csrf_token %}
       {{ post_form.media }}
       {{ post_form | crispy }}
-      <button type="submit" class="btn btn-primary" id="post-btn">Post</button>
+      <button type="submit" class="btn btn-primary" id="post-btn" aria-label="post button">Post</button>
     </form>
   </div>
   <br>

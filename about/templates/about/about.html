@@ -34,10 +34,10 @@
                 ears! Fill out the form below to share your thoughts, ask questions, or just say hello. We can't wait to
                 hear from you and make Sojourn Scribbles even more amazing together!</p>
 
-            <form method="post">
+            <form method="post" aria-label="Submit a message">
                 {{ collaborate_form | crispy }}
                 {% csrf_token %}
-                <button class="btn btn-secondary" type="submit">Submit</button>
+                <button class="btn btn-secondary" type="submit" aria-label="submit button">Submit</button>
             </form>
         </div>
     </div>

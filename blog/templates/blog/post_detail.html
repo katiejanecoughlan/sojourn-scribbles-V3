@@ -44,7 +44,7 @@
         <!-- Delete post button -->
         <div class="col-md-8 card mb-4 mt-3">
             {% if user.is_authenticated and post.author == user %}
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" aria-label="delete button">Delete
                 Post</button>
             {% endif %}
         </div>
@@ -69,8 +69,8 @@
                     <p class="approval">This comment is awaiting approval</p>
                     {% endif %}
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}" aria-label="delete button">Delete</button>
+                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}" aria-label="edit button">Edit</button>
                     {% endif %}
                 </div>
                 {% endfor %}
@@ -84,7 +84,7 @@
                 <form id="commentForm" method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg" aria-label="submit button">Submit</button>
                 </form>
                 {% else %}
                 <p>Log in to leave a comment</p>
