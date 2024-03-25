@@ -194,6 +194,10 @@ By leveraging Agile principles and utilizing the Kanban board effectively, the d
   - Implement a search bar to empower users to find specific content on the website, improving usability and content discoverability.
   - This feature expands the navigation options beyond existing filters, providing users with greater flexibility in exploring the diverse content available on the platform.
 
+- **Improved UX:**
+  - Introduce a landing page that serves as a log in/register page and contains info about Sojourn Scribbles to provide the user more immediately with a clear call to action and purpose for the website.  
+  - The user would be directed to this page when they click to the website as opposed to the current home page post feed. 
+
 ##### [ Back to Top ](#table-of-contents)
 
 # Technology Stack
