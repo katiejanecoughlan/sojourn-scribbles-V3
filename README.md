@@ -73,7 +73,7 @@ Next we have the navbar and footer - the end product of both turned out nearly t
 
 # Agile Development
 
-For the development of Sojourn Scribbles, I adopted an Agile methodology to ensure iterative and efficient progress throughout the project lifecycle. Central to this approach was the utilization of a Kanban board hosted on GitHub Projects.
+For the development of Sojourn Scribbles, I adopted an Agile methodology to ensure iterative and efficient progress throughout the project lifecycle. Central to this approach was the utilization of a Kanban board hosted on GitHub Projects. You can view the project board [here](https://github.com/users/katiejanecoughlan/projects/2).
 
 ## Kanban Board Overview
 
